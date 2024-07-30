@@ -1,3 +1,4 @@
+//By Navy Zhang 710605420@qq.com 
 #include <iostream>
 #include <Windows.h>
 #include <wbemidl.h>

@@ -1,3 +1,4 @@
+//By Navy Zhang 710605420@qq.com 
 #include "GetSysTemHardWareID.h"
 #include <vector>
 #include <iostream> 

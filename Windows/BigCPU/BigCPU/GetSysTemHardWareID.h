@@ -1,3 +1,4 @@
+//By Navy Zhang 710605420@qq.com 
 #ifndef _H_GETSYSTEMHARDWAREID
 #define _H_GETSYSTEMHARDWAREID
 #include<wbemcli.h>
