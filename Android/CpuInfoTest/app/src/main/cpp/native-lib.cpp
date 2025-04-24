@@ -5,12 +5,12 @@
 
 #include "AndroidCpuInfo.h"
 #include "AndroidBuf.h"
-
+#include "GetAndroidInfo.h"
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_cpuinfotest_MainActivity_stringFromJNI(
         JNIEnv* env,
-        jobject /* this */) {
+        jobject MainActivity     /* this */) {
     std::string hello = "Hello from C++";
 
     std::cout.rdbuf(new AndroidBuf());
@@ -24,5 +24,9 @@ Java_com_example_cpuinfotest_MainActivity_stringFromJNI(
 
         std::cout << "cpu id: " << cpu._processor << " Max ClockSpeed: " <<  threads_speed  << "MHz"<<std::endl;
     }
+
+
+    std::cout << "BatteryLevel: " << GetAndroidInfo::GetBatteryLevel(env,MainActivity) << " BatteryTemperature : " <<  GetAndroidInfo::GetBatteryTemperature(env,MainActivity) << "°C"<<std::endl;
+
     return env->NewStringUTF(hello.c_str());
 }
