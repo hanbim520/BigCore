@@ -21,11 +21,11 @@ Java_com_example_cpuinfotest_MainActivity_stringFromJNI(
     {
         auto max_speed = cpu.GetMaxClockSpeed_MHz();
         auto min_speed = cpu.GetMinClockSpeed_MHz();
-        auto reg_speed = cpu.GetRegularClockSpeed_MHz();
+        //auto reg_speed = cpu.GetRegularClockSpeed_MHz(); //x86才有
         auto cur_speed = cpu.GetCurrentClockSpeed();
        // assert((threads_utility.size() == threads_speed.size()));
 
-        std::cout << "cpu id: " << cpu._processor << " Max ClockSpeed: " <<  max_speed  << "MHz"<< " Min ClockSpeed: " <<  min_speed  << "MHz"<< " Regular ClockSpeed: " <<  reg_speed  << "MHz"<< " Current ClockSpeed: " <<  cur_speed  << "MHz"<< std::endl;
+        std::cout << "cpu id: " << cpu._processor << " Max ClockSpeed: " <<  max_speed  << "MHz"<< " Min ClockSpeed: " <<  min_speed  << "MHz"<< " Regular ClockSpeed: " <<    cur_speed  << "MHz"<< std::endl;
     }
 
 
